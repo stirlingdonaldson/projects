@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "PP Neue Montreal";
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: 0.5s background-color;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a,
+p {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.5s color;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 1em;
+  transition: 0.5s color;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5em;
+  z-index: 2;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 5em 2.5em;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  display: flex;
+  z-index: 0;
+}
+
+.minimap {
+  position: sticky;
+  top: 0;
+  width: 25%;
+  height: 100vh;
+  padding-top: 300px;
+  overflow: hidden;
+  background-color: #000;
+  transition: 0.5s background-color;
+}
+
+.active-img-indicator {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 125px;
+  border: 1.5px solid #fff;
+  border-radius: 4px;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.preview {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1254px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images {
+  position: relative;
+  top: 0;
+  width: 75%;
+}
+
+.item {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.item-img {
+  width: 500px;
+  height: 550px;
+}
+
+.item-copy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.item-preview {
+  position: relative;
+  width: 100px;
+  height: 125px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.hero-img {
+  margin-bottom: 2em;
+}
+
+.wrapper.dark-theme,
+.wrapper.wrapper.dark-theme .minimap {
+  background-color: #fff;
+}
+
+.wrapper.dark-theme a,
+.wrapper.dark-theme p,
+.wrapper.dark-theme h1 {
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .item {
+    width: 400px;
+    height: 500px;
+  }
+}
