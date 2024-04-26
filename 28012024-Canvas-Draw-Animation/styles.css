@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background: transparent;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: red;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.site-content {
+  position: absolute;
+}
+
+.nav,
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.links {
+  display: flex;
+  gap: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Neue Montreal";
+  pointer-events: auto;
+}
+
+.logo a {
+  font-family: "Proxy_Mono_Beta";
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.hero-copy h1 {
+  font-size: 8vw;
+  color: #fff;
+  font-family: "Proxy_Mono_Beta";
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.hero-copy p {
+  font-size: 2vw;
+  color: #fff;
+  font-family: "Neue Montreal";
+  margin: 0.5em 0;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
