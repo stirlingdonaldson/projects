@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Druk Trial";
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filters {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  padding: 2em 2em 8em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1em;
+}
+
+.filter {
+  width: max-content;
+  height: max-content;
+  padding: 1.5em 0 0.5em 0;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.filter.active {
+  padding-top: 2.5em;
+}
+
+.filter p {
+  position: relative;
+  bottom: 10px;
+  padding: 0 0.5em;
+  font-family: "PP Neue Montreal";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.filter.active p {
+  bottom: 24px;
+}
+
+.filter h1 span {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 75px;
+  color: #000;
+  line-height: 80%;
+  transition: color 0.3s;
+}
+
+.filter.active h1 span {
+  color: #fb5eff;
+}
+
+.items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+}
+
+.items-col {
+  flex: 1;
+  height: max-content;
+  padding: 2em 1em;
+}
+
+.items-col:nth-child(2) {
+  position: relative;
+  top: 10em;
+}
+
+.item {
+  padding: 1em 1em 4em 1em;
+}
+
+.item-img {
+  width: 100%;
+  height: 300px;
+}
+
+.item-copy p {
+  font-family: "PP Neue Montreal";
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0.5em 0;
+}
+
+@media (max-width: 900px) {
+  .items {
+    width: 100%;
+  }
+
+  .filters {
+    z-index: 2;
+  }
+
+  .filter {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+}
