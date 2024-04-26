@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "PP Neue Montreal";
+  background-color: rgb(196, 196, 176);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+}
+
+nav .logo a {
+  font-weight: bold;
+}
+
+nav > div {
+  flex: 1;
+}
+
+nav .nav-items {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+nav .contact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+}
+
+.items-col {
+  flex: 1;
+  display: flex;
+}
+
+.item {
+  position: relative;
+  top: 15vh;
+  height: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-copy {
+  padding: 0.5em;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-copy-wrapper {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.item-copy-wrapper p {
+  position: relative;
+  margin-bottom: 0.25em;
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 100%;
+}
+
+.item-side .item-img {
+  flex: 1;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.items-col:nth-child(2) {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-main {
+  position: relative;
+  top: 15vh;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.item-main .item-img {
+  overflow: hidden;
+}
+
+.item-main .item-img img {
+  transform: scale(0.5);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+}
+
+.header {
+  position: absolute;
+  bottom: 35%;
+  transform-origin: center center;
+  width: 100%;
+  display: flex;
+}
+
+.header-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.25);
+}
+
+.header-item-1 {
+  left: 18vw;
+}
+
+.header-item-2 {
+  right: 18vw;
+}
+
+.letter {
+  flex: 1;
+  font-size: 17vw;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.letter-wrapper {
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .item-side {
+    display: none;
+  }
+
+  .header {
+    bottom: 45%;
+  }
+
+  .header-item {
+    transform: scale(0.5);
+  }
+
+  .header-item-1 {
+    left: 14vw;
+  }
+
+  .header-item-2 {
+    right: 11vw;
+  }
+}
