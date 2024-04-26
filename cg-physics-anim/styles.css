@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header h1 {
+  font-family: "Circular Std", sans-serif;
+  font-size: 12vw;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 175%;
+  color: #fff;
+  text-align: center;
+}
+
+.item {
+  position: absolute;
+  padding: 0.5em 0.5em 4em 0.5em;
+  width: 200px;
+  height: 225px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
