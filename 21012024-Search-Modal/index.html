@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Minimalist Search Modal | 21012024 | @Codegrid</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="search">
+      <div class="search-modal">
+        <!-- search bar -->
+        <div class="search-bar">
+          <div class="search-icon">
+            <i class="ph ph-magnifying-glass"></i>
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              id="search-input"
+              onkeyup="searchList()"
+              placeholder="Search for action, people, instruments"
+            />
+          </div>
+          <div class="action-icons">
+            <div class="filter-icon">
+              <i class="ph ph-sliders-horizontal"></i>
+            </div>
+            <div class="cmd-icon">
+              <img src="./cmd-f.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- tags -->
+        <div class="tags-container">
+          <span>I'm looking for...</span>
+          <div class="tags">
+            <div class="tag">
+              <i class="ph ph-radio-button"></i>
+              <p>Reactions</p>
+              <i class="ph-thin ph-x"></i>
+            </div>
+            <div class="tag">
+              <i class="ph ph-users"></i>
+              <p>People</p>
+              <i class="ph-thin ph-x"></i>
+            </div>
+            <div class="tag">
+              <i class="ph ph-buildings"></i>
+              <p>Companies</p>
+              <i class="ph-thin ph-x"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- search items -->
+        <div class="search-items-container">
+          <p>Last search &nbsp;&nbsp;<span>3</span></p>
+          <ul id="search-items">
+            <li>
+              <div class="user"></div>
+              <a href="#">Jason Woordheart <span>jason@dribbble.com</span></a>
+              <div class="item-icons">
+                <div class="icon">
+                  <i class="ph ph-chat-teardrop-text"></i>
+                </div>
+                <div class="icon">
+                  <i class="ph ph-list-plus"></i>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="user"></div>
+              <a href="#">Rob Miller <span>rob@icloud.com</span></a>
+              <div class="item-icons">
+                <div class="icon">
+                  <i class="ph ph-list-plus"></i>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="user"></div>
+              <a href="#">Hannah Steward <span>replied on thread</span></a>
+              <div class="item-icons">
+                <div class="icon">
+                  <i class="ph ph-envelope-simple"></i>
+                </div>
+                <div class="icon">
+                  <i class="ph ph-list-plus"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- quick actions -->
+        <div class="quick-actions">
+          <div class="q-action q-header">
+            <span>Quick actions</span>
+          </div>
+          <div class="q-action">
+            <div class="icon">
+              <i class="ph ph-plus"></i>
+            </div>
+            <div class="action"><p>Create new task</p></div>
+            <div class="key"><span>E</span></div>
+          </div>
+          <div class="q-action">
+            <div class="icon">
+              <i class="ph ph-plus"></i>
+            </div>
+            <div class="action"><p>Create note</p></div>
+            <div class="key"><span>S</span></div>
+          </div>
+          <div class="q-action">
+            <div class="icon">
+              <i class="ph ph-plus"></i>
+            </div>
+            <div class="action"><p>Add member</p></div>
+            <div class="key"><span>R</span></div>
+          </div>
+        </div>
+
+        <!-- file -->
+        <div class="file">
+          <div class="f-header">
+            <p>Files &nbsp;&nbsp;<span>1</span></p>
+          </div>
+          <div class="f-item">
+            <div class="icon"><i class="ph ph-file-arrow-down"></i></div>
+            <div class="file-item">
+              <p>Invoice<span>.pdf</span></p>
+              <p><i class="ph ph-checks"></i></p>
+            </div>
+            <div class="btn">
+              <i class="ph-bold ph-share-fat"></i>
+              <span>Share</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const searchList = () => {
+          let input, filter, ul, li, a, i, txtValue;
+          let visibleCount = 0;
+
+          input = document.getElementById("search-input");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("search-items");
+          li = ul.getElementsByTagName("li");
+
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                  visibleCount++;
+              } else {
+                  li[i].style.display = "none";
+              }
+          }
+
+          document.querySelector('.search-items-container p span').textContent = visibleCount;
+      }
+    </script>
+  </body>
+</html>
