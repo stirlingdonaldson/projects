@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.counter {
+  position: fixed;
+  padding: 2em;
+  top: 0;
+  left: 0;
+  color: #000;
+  font-family: "Neue Montreal";
+  text-decoration: none;
+}
+
+.link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bg-color {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(250, 186, 74);
+  background: linear-gradient(
+    0deg,
+    rgba(250, 186, 74, 1) 0%,
+    rgba(252, 176, 69, 0) 100%
+  );
+  z-index: -1;
+}
+
+.items {
+  width: 100%;
+  height: 100%;
+  padding: 4em 2em;
+  font-family: "Neue Montreal";
+}
+
+.item {
+  width: 40%;
+  margin-bottom: 4em;
+}
+
+.item-info {
+  padding: 0.5em 0;
+}
+
+.item-img {
+  overflow: hidden;
+}
+
+.item-img img {
+  will-change: transform;
+  transform: scale(1.25);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.item:nth-child(1) .item-img {
+  background: #faba4a;
+}
+
+.item:nth-child(2) .item-img {
+  background: #bb2a26;
+}
+
+.item:nth-child(3) .item-img {
+  background: #7e7d65;
+}
+
+.item:nth-child(4) .item-img {
+  background: #989682;
+}
+
+.item:nth-child(5) .item-img {
+  background: #5e4036;
+}
+
+.item:nth-child(6) .item-img {
+  background: #e33b12;
+}
+
+.item:nth-child(7) .item-img {
+  background: #252d1a;
+}
+
+.item:nth-child(8) .item-img {
+  background: #b04c0d;
+}
+
+.item:nth-child(1),
+.item:nth-child(5),
+.item:nth-child(8) {
+  position: relative;
+  left: 5%;
+}
+
+.item:nth-child(3),
+.item:nth-child(7) {
+  position: relative;
+  left: 20%;
+}
+
+.item:nth-child(2),
+.item:nth-child(4),
+.item:nth-child(6) {
+  position: relative;
+  left: 50%;
+}
