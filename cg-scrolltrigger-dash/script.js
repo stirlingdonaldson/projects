@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "none",
     scrollTrigger: {
       trigger: ".dashboard",
-      start: "800vh top",
+      start: "8000vh top",
       end: "825vh top",
       scrub: true,
     },
